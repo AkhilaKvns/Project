@@ -1,0 +1,33 @@
+ 
+
+products table
+
+CREATE TABLE products(
+postgres(# id serial PRIMARY KEY,
+postgres(# url char(10000),
+postgres(# site char(10),
+postgres(# active smallint);
+
+
+
+
+
+
+meta data table
+
+CREATE TABLE product_metadata(
+id serial PRIMARY KEY,
+product_id int references products(id),
+name char(10000),
+price float(20),
+description varchar(500),
+rating numeric(3,2),
+latest smallint);
+
+
+
+
+
+
+
+
